@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SignalStrengthView">
+        <attr name="segmentCount" format="integer" />
+        <attr name="segmentColor_0" format="color" />
+        <attr name="segmentColor_1" format="color" />
+        <attr name="segmentColor_2" format="color" />
+        <attr name="segmentColor_3" format="color" />
+        <!-- add more segmentColor attributes as needed -->
+    </declare-styleable>
+
+    <attr name="signalStrengthStyle" type="reference" />
+
+    <declare-styleable name="SignalStrengthViewEx">
+        <attr name="signalStrengthColor" format="color" />
+        <attr name="signalStrengthBackgroundColor" format="color" />
+        <attr name="signalStrengthTheme" format="enum">
+            <enum name="rounded" value="0" />
+            <enum name="sharp" value="1" />
+        </attr>
+
+        <attr name="signalStrengthLevel" format="integer" />
+    </declare-styleable>
+</resources>

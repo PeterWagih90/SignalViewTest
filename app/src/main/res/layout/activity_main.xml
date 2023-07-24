@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.base.testproject.SignalStrengthView
+        android:id="@+id/signal_strength_view"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:segmentColor_0="#F44336"
+        app:segmentColor_1="#FF5722"
+        app:segmentColor_2="#8BC34A"
+
+        app:segmentColor_3="#4CAF50" />
+
+
+    <com.base.testproject.ProgressBarView
+        android:id="@+id/signal_strength_view2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signal_strength_view" />
+
+    <com.base.testproject.signalstrength.SignalStrengthViewEx
+        android:id="@+id/signal_strength_view3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signal_strength_view2"
+        app:signalStrengthBackgroundColor="#4CAF50"
+        app:signalStrengthColor="@color/yellow"
+        app:signalStrengthLevel="50"
+        app:signalStrengthTheme="rounded" />
+
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progress_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="100dp"-->
+<!--        style="?android:attr/progressBarStyleHorizontal"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:indeterminate="false"-->
+<!--        android:max="100"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/signal_strength_view3"-->
+<!--        android:progress="25"-->
+<!--        />-->
+
+
+    <com.beardedhen.androidbootstrap.BootstrapProgressBarGroup
+        android:id="@+id/example_progress_bar_group_round_group"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="8dp"
+        app:bootstrapMaxProgress="100"
+        app:bootstrapSize="xl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signal_strength_view3">
+
+        <com.beardedhen.androidbootstrap.BootstrapProgressBar
+            android:id="@+id/red_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:backgroundTintMode="src_over"
+            app:animated="true"
+            app:bootstrapProgress="25" />
+
+        <com.beardedhen.androidbootstrap.BootstrapProgressBar
+            android:id="@+id/yellow_section"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:bootstrapBrand="warning"
+            app:bootstrapProgress="25" />
+
+        <com.beardedhen.androidbootstrap.BootstrapProgressBar
+            android:id="@+id/blue_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:bootstrapBrand="info"
+            app:bootstrapProgress="25" />
+
+        <com.beardedhen.androidbootstrap.BootstrapProgressBar
+            android:id="@+id/green_section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:bootstrapBrand="success"
+            app:bootstrapProgress="25" />
+
+    </com.beardedhen.androidbootstrap.BootstrapProgressBarGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

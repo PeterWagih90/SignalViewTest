@@ -1,0 +1,67 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="5dip" />
+            <gradient
+                android:startColor="#FFCCCCCC"
+                android:centerColor="#FFCCCCCC"
+                android:centerY="0.75"
+                android:endColor="#FFCCCCCC"
+                android:angle="270"
+                />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <layer-list>
+                <item android:id="@+id/section1">
+                    <shape>
+                        <corners android:radius="5dip" />
+                        <gradient
+                            android:startColor="#FFFF4444"
+                            android:endColor="#FFFF4444"
+                            android:angle="270"
+                            />
+                    </shape>
+                </item>
+
+                <item android:id="@+id/section2"
+                    android:left="10dp">
+                    <shape>
+                        <corners android:radius="5dip" />
+                        <gradient
+                            android:startColor="#FFFFBB33"
+                            android:endColor="#FFFFBB33"
+                            android:angle="270"
+                            />
+                    </shape>
+                </item>
+
+                <item android:id="@+id/section3"
+                    android:left="20dp">
+                    <shape>
+                        <corners android:radius="5dip" />
+                        <gradient
+                            android:startColor="#FF33B5E5"
+                            android:endColor="#FF33B5E5"
+                            android:angle="270"
+                            />
+                    </shape>
+                </item>
+
+                <item android:id="@+id/section4"
+                    android:left="30dp">
+                    <shape>
+                        <corners android:radius="5dip" />
+                        <gradient
+                            android:startColor="#FF99CC00"
+                            android:endColor="#FF99CC00"
+                            android:angle="270"
+                            />
+                    </shape>
+                </item>
+            </layer-list>
+        </clip>
+    </item>
+</layer-list>
